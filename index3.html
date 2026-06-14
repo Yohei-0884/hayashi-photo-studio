@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>七五三撮影｜久喜市の林写真館</title>
+<meta name="description" content="人見知りでも泣いても大丈夫。久喜市の林写真館で、家族みんなの七五三を残しませんか。衣装・美容・スタジオ・家族写真まで安心してお任せください。">
+
+<style>
+  /* ============ RESET & BASE ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'YuMincho', Georgia, serif;
+    color: #3a2e28;
+    background: #fff;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ============ CSS VARIABLES ============ */
+  :root {
+    --cream:    #fffdf9;
+    --beige:    #fef4ec;
+    --pink:     #fce8e4;
+    --pink-mid: #f0a898;
+    --coral:    #f07860;
+    --coral-lt: #fce8e4;
+    --sage:     #7db89a;
+    --sage-lt:  #e8f4ef;
+    --gold:     #f0c060;
+    --gold-dark:#c89020;
+    --brown:    #3a2e28;
+    --brown-lt: #7a6860;
+    --white:    #ffffff;
+    --shadow:   0 4px 24px rgba(240,120,96,.10);
+    --radius:   16px;
+  }
+
+  /* ============ UTILITY ============ */
+  .section { padding: 64px 20px; }
+  .section--cream { background: var(--cream); }
+  .section--beige { background: var(--beige); }
+  .section--pink  { background: #fff5f3; }
+  .section--white { background: var(--white); }
+
+  .container { max-width: 760px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .section-title {
+    font-size: clamp(20px, 5vw, 28px);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--brown);
+    margin-bottom: 12px;
+  }
+  .section-sub {
+    font-size: 14px;
+    text-align: center;
+    color: var(--brown-lt);
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin: 16px auto 32px;
+    border-radius: 2px;
+  }
+
+  /* ============ FLOATING NAV ============ */
+  .top-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+    background: rgba(255,255,255,.95);
+    border-radius: 50px;
+    padding: 10px 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    backdrop-filter: blur(8px);
+  }
+  .top-nav a {
+    font-size: 11px;
+    color: var(--brown);
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--beige);
+    white-space: nowrap;
+    transition: all .2s;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .top-nav a.primary {
+    background: linear-gradient(135deg, var(--coral), #f05060);
+    color: #fff;
+    border-color: var(--coral);
+  }
+  .top-nav a:active { opacity: .75; }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: #fff8f4;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom,
+        rgba(255,245,238,.15) 0%,
+        rgba(255,245,238,.25) 50%,
+        rgba(255,245,238,.80) 80%,
+        rgba(255,245,238,.97) 100%),
+      url('https://kuki884.com/hayashi/images/depth/753/gallery/01.jpg') center 30%/cover no-repeat;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 48px 24px 120px;
+    color: var(--brown);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: .18em;
+    padding: 5px 16px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    font-family: 'Hiragino Sans', sans-serif;
+    font-weight: 600;
+  }
+  .hero-main {
+    font-size: clamp(26px, 7vw, 42px);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--brown);
+  }
+  .hero-main em {
+    font-style: normal;
+    color: var(--coral);
+  }
+  .hero-sub {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--brown-lt);
+    margin-bottom: 32px;
+    font-family: 'Hiragino Sans', sans-serif;
+    font-weight: 400;
+  }
+  .hero-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    transition: all .2s;
+    font-family: 'Hiragino Sans', sans-serif;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--coral), #f05060);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(240,120,96,.35);
+  }
+  .btn-primary:active { opacity: .9; transform: scale(.98); }
+  .btn-outline-dark {
+    border: 2px solid rgba(58,46,40,.25);
+    color: var(--brown);
+    font-size: 13px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(4px);
+  }
+  .btn-outline-dark:active { background: rgba(240,120,96,.08); }
+  .hero-cta-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .hero-cta-row .btn-outline-dark { flex: 1; font-size: 12px; padding: 11px 8px; }
+  .hero-scroll {
+    position: absolute;
+    bottom: 88px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--coral);
+    font-size: 10px;
+    letter-spacing: .15em;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .hero-scroll::after {
+    content: '';
+    width: 1px;
+    height: 36px;
+    background: linear-gradient(var(--coral), transparent);
+    animation: scrollLine 1.6s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%,100%{ opacity: .4; transform: scaleY(1); }
+    50%{ opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ============ PHOTO STRIP ============ */
+  .photo-strip {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 16px 20px;
+    background: var(--coral-lt);
+    scrollbar-width: none;
+  }
+  .photo-strip::-webkit-scrollbar { display: none; }
+  .photo-strip img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 12px;
+  }
+
+  /* ============ 1. EMPATHY ============ */
+  .worries-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .worry-card {
+    background: #fff;
+    border: 2px solid #fce8e4;
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(240,120,96,.08);
+  }
+  .worry-icon { font-size: 28px; margin-bottom: 8px; }
+  .worry-text { font-size: 13px; line-height: 1.6; color: var(--brown); font-family: 'Hiragino Sans', sans-serif; }
+  .empathy-close {
+    background: linear-gradient(135deg, #fff5f0, #fce8e4);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--brown);
+    font-weight: 500;
+    border: 2px solid #fce8e4;
+  }
+  .empathy-close strong { color: var(--coral); }
+
+  /* ============ 2. REASONS ============ */
+  .reason-list { display: flex; flex-direction: column; gap: 16px; }
+  .reason-card {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(240,120,96,.08);
+    display: flex;
+    gap: 0;
+    border: 1.5px solid #fce8e4;
+  }
+  .reason-num {
+    background: linear-gradient(160deg, var(--coral), #f05878);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    width: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    font-style: italic;
+  }
+  .reason-body { padding: 20px 16px; }
+  .reason-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--brown); }
+  .reason-desc { font-size: 13px; color: var(--brown-lt); line-height: 1.8; font-family: 'Hiragino Sans', sans-serif; }
+
+  /* ============ 3. GALLERY ============ */
+  .gallery-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    scrollbar-width: none;
+  }
+  .gallery-tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    white-space: nowrap;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1.5px solid #fce8e4;
+    background: #fff;
+    color: var(--brown-lt);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .tab-btn.active {
+    background: var(--coral);
+    border-color: var(--coral);
+    color: #fff;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery-item { position: relative; border-radius: var(--radius); overflow: hidden; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-img-wrap {
+    aspect-ratio: 4/3;
+    background: var(--beige);
+    overflow: hidden;
+  }
+  .gallery-img-wrap.tall { aspect-ratio: 3/4; }
+  .gallery-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .4s;
+  }
+  .gallery-item:hover .gallery-img-wrap img { transform: scale(1.04); }
+  .gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(43,31,22,.7));
+    color: #fff;
+    font-size: 11px;
+    padding: 20px 10px 10px;
+    line-height: 1.5;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+
+  /* Photo placeholder (shown when image fails) */
+  .gallery-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--brown-lt);
+    font-size: 11px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .gallery-placeholder .ph-icon { font-size: 32px; }
+
+  /* ============ 4. STUDIO ============ */
+  .studio-intro {
+    font-size: 14px;
+    text-align: center;
+    color: var(--brown-lt);
+    margin-bottom: 32px;
+    line-height: 1.9;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .studio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .studio-card {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .studio-img {
+    height: 120px;
+    background: linear-gradient(135deg, var(--beige), var(--pink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+  }
+  .studio-info { padding: 12px; }
+  .studio-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .studio-note { font-size: 11px; color: var(--brown-lt); line-height: 1.6; font-family: 'Hiragino Sans', sans-serif; }
+  .studio-feature {
+    margin-top: 24px;
+    background: linear-gradient(135deg, var(--beige), #f9eeea);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+  .studio-feature p { font-size: 14px; line-height: 1.9; font-family: 'Hiragino Sans', sans-serif; }
+
+  /* ============ 5. FLOW ============ */
+  .flow-list { display: flex; flex-direction: column; gap: 0; }
+  .flow-item {
+    display: flex;
+    gap: 16px;
+    position: relative;
+    padding-bottom: 28px;
+  }
+  .flow-item:last-child { padding-bottom: 0; }
+  .flow-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40px;
+  }
+  .flow-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--coral), #f05878);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(240,120,96,.35);
+  }
+  .flow-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(var(--coral), #fce8e4);
+    margin-top: 6px;
+    border-radius: 2px;
+    min-height: 24px;
+  }
+  .flow-item:last-child .flow-line { display: none; }
+  .flow-body { padding-top: 8px; }
+  .flow-step { font-size: 11px; color: var(--gold-dark); letter-spacing: .1em; font-family: 'Hiragino Sans', sans-serif; margin-bottom: 2px; }
+  .flow-name { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .flow-desc { font-size: 13px; color: var(--brown-lt); line-height: 1.8; font-family: 'Hiragino Sans', sans-serif; }
+  .flow-tag {
+    display: inline-block;
+    background: var(--beige);
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 3px 8px;
+    margin-top: 6px;
+    color: var(--brown-lt);
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+
+  /* ============ 6. PRICING ============ */
+  .pricing-note {
+    background: linear-gradient(135deg, var(--gold), #f0a828);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(240,192,96,.3);
+  }
+  .pricing-note p { font-size: 13px; line-height: 1.8; font-family: 'Hiragino Sans', sans-serif; }
+  .pricing-note strong { font-size: 18px; display: block; margin-bottom: 6px; }
+
+  .plan-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+  .plan-card {
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--beige);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .plan-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1.5px solid var(--beige);
+  }
+  .plan-header.a { background: #fdf5e8; }
+  .plan-header.b { background: #f5f0fb; }
+  .plan-header.c { background: #f0f5fb; }
+  .plan-badge {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .plan-badge.a { background: linear-gradient(135deg, var(--coral), #f05060); }
+  .plan-badge.b { background: #8b7ab8; }
+  .plan-badge.c { background: #5b8cc8; }
+  .plan-head-text .plan-name { font-size: 16px; font-weight: 700; }
+  .plan-head-text .plan-tagline { font-size: 12px; color: var(--brown-lt); font-family: 'Hiragino Sans', sans-serif; margin-top: 2px; }
+  .plan-body { padding: 16px 20px; }
+  .plan-ages { display: flex; gap: 10px; flex-wrap: wrap; }
+  .plan-age { flex: 1; min-width: 80px; }
+  .plan-age-label { font-size: 11px; color: var(--gold-dark); font-family: 'Hiragino Sans', sans-serif; letter-spacing: .05em; margin-bottom: 4px; }
+  .plan-age-price { font-size: 20px; font-weight: 700; color: var(--brown); }
+  .plan-age-price small { font-size: 12px; font-weight: 400; color: var(--brown-lt); font-family: 'Hiragino Sans', sans-serif; }
+  .plan-includes {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--beige);
+    font-size: 12px;
+    color: var(--brown-lt);
+    font-family: 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+  }
+
+  /* accordion */
+  .accordion { margin-top: 16px; }
+  .accordion-header {
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+  }
+  .accordion-header .arrow {
+    font-size: 18px;
+    transition: transform .3s;
+    color: var(--gold);
+  }
+  .accordion-header.open .arrow { transform: rotate(180deg); }
+  .accordion-body {
+    display: none;
+    padding: 16px;
+    background: #fff;
+    border: 1.5px solid var(--beige);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    font-size: 13px;
+    color: var(--brown-lt);
+    line-height: 1.8;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .accordion-body.open { display: block; }
+
+  .pricing-disclaimer {
+    font-size: 12px;
+    color: var(--brown-lt);
+    line-height: 1.8;
+    font-family: 'Hiragino Sans', sans-serif;
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: var(--cream);
+    border-radius: 8px;
+  }
+  .pricing-disclaimer a { color: var(--gold-dark); text-decoration: underline; }
+
+  /* ============ 7. VOICE ============ */
+  .voices { display: flex; flex-direction: column; gap: 20px; }
+  .voice-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
+  .voice-quote {
+    font-size: 48px;
+    color: var(--pink);
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+  }
+  .voice-text { font-size: 14px; line-height: 1.9; color: var(--brown); margin-bottom: 12px; }
+  .voice-meta { font-size: 12px; color: var(--gold-dark); font-family: 'Hiragino Sans', sans-serif; }
+  .voice-stars { color: var(--gold); font-size: 14px; margin-bottom: 6px; }
+
+  /* ============ 8. FAQ ============ */
+  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  .faq-item {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .faq-q {
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--brown);
+    user-select: none;
+  }
+  .faq-q-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--coral), #f05878);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .faq-arrow {
+    margin-left: auto;
+    color: var(--gold);
+    font-size: 18px;
+    transition: transform .3s;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-a {
+    display: none;
+    padding: 0 20px 20px 56px;
+    font-size: 13px;
+    color: var(--brown-lt);
+    line-height: 1.9;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .faq-a-icon {
+    display: inline-block;
+    color: var(--pink-mid);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ============ 9. PHOTOGRAPHERS ============ */
+  .photographers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .photographer-card {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .photographer-img {
+    height: 120px;
+    background: linear-gradient(135deg, var(--beige), var(--pink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  .photographer-info { padding: 12px; }
+  .photographer-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .photographer-role { font-size: 11px; color: var(--gold-dark); letter-spacing: .05em; font-family: 'Hiragino Sans', sans-serif; margin-bottom: 8px; }
+  .photographer-msg { font-size: 12px; color: var(--brown-lt); line-height: 1.7; font-family: 'Hiragino Sans', sans-serif; }
+  .photographer-card.featured { grid-column: span 2; display: flex; }
+  .photographer-card.featured .photographer-img { width: 120px; height: auto; min-height: 120px; flex-shrink: 0; }
+  .photographer-card.featured .photographer-info { text-align: left; }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta {
+    background: linear-gradient(160deg, #fff5f0, #fce8e4);
+    color: var(--brown);
+    padding: 72px 24px 100px;
+    text-align: center;
+    border-top: 3px solid #fcd8d0;
+  }
+  .final-cta .section-label { color: var(--coral); }
+  .final-cta .section-title { color: var(--brown); font-size: clamp(22px, 5.5vw, 32px); }
+  .final-cta .divider { background: var(--coral); }
+  .final-cta-sub {
+    font-size: 14px;
+    color: var(--brown-lt);
+    line-height: 2;
+    margin-bottom: 40px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .cta-buttons { display: flex; flex-direction: column; gap: 14px; }
+  .btn-cta-line {
+    background: #06c755;
+    color: #fff;
+    border-radius: 50px;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Hiragino Sans', sans-serif;
+    box-shadow: 0 4px 16px rgba(6,199,85,.3);
+  }
+  .btn-cta-web {
+    background: linear-gradient(135deg, var(--coral), #f05060);
+    color: #fff;
+    border-radius: 50px;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Hiragino Sans', sans-serif;
+    box-shadow: 0 4px 16px rgba(240,120,96,.35);
+  }
+  .btn-cta-tel {
+    border: 2px solid #fcd8d0;
+    color: var(--brown);
+    background: #fff;
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .btn-cta-dress {
+    border: 2px solid var(--sage);
+    color: var(--sage);
+    background: var(--sage-lt);
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .final-info {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid #fcd8d0;
+    font-size: 12px;
+    color: var(--brown-lt);
+    line-height: 2;
+    font-family: 'Hiragino Sans', sans-serif;
+  }
+  .final-info a { color: var(--coral); text-decoration: underline; }
+
+  /* ============ INLINE CTA ============ */
+  .inline-cta {
+    background: linear-gradient(135deg, var(--beige), #f9eeea);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .inline-cta p { font-size: 14px; color: var(--brown-lt); margin-bottom: 16px; font-family: 'Hiragino Sans', sans-serif; }
+  .inline-cta-btns { display: flex; gap: 10px; }
+  .inline-cta-btns a { flex: 1; }
+  .btn-sm-gold {
+    background: linear-gradient(135deg, var(--coral), #f05060);
+    color: #fff;
+    border-radius: 50px;
+    padding: 13px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    font-family: 'Hiragino Sans', sans-serif;
+    box-shadow: 0 4px 12px rgba(240,120,96,.25);
+  }
+  .btn-sm-outline {
+    border: 2px solid #fcd8d0;
+    color: var(--coral);
+    border-radius: 50px;
+    padding: 12px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    font-family: 'Hiragino Sans', sans-serif;
+    background: #fff;
+  }
+
+  /* ============ CAMPAIGN BANNER ============ */
+  .campaign {
+    background: linear-gradient(135deg, var(--coral), #f08060);
+    color: #fff;
+    padding: 20px 24px;
+    text-align: center;
+  }
+  .campaign p { font-size: 12px; font-family: 'Hiragino Sans', sans-serif; opacity: .9; }
+  .campaign strong { font-size: 17px; display: block; margin-bottom: 4px; letter-spacing: .03em; }
+
+  /* ============ RESPONSIVE (tablet+) ============ */
+  @media (min-width: 600px) {
+    .worries-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-item.wide { grid-column: span 1; }
+    .cta-buttons { flex-direction: row; flex-wrap: wrap; }
+    .cta-buttons a { flex: 1; min-width: 200px; }
+    .photographers { grid-template-columns: repeat(3, 1fr); }
+    .photographer-card.featured { grid-column: span 3; }
+  }
+  @media (min-width: 760px) {
+    .hero-content { padding-bottom: 80px; }
+    .top-nav { display: none; }
+  }
+
+  /* ============ MISC ============ */
+  .text-center { text-align: center; }
+  .mt-8  { margin-top: 8px; }
+  .mt-16 { margin-top: 16px; }
+  .mt-24 { margin-top: 24px; }
+  .mt-40 { margin-top: 40px; }
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 24px; }
+  .tag { background: var(--beige); border-radius: 50px; padding: 5px 14px; font-size: 12px; color: var(--brown-lt); font-family: 'Hiragino Sans', sans-serif; }
+</style>
+</head>
+
+<body>
+
+<!-- ===== FLOATING NAV ===== -->
+<nav class="top-nav" aria-label="クイックアクセス">
+  <a href="https://kuki884.com/contact/" class="primary">📅 相談・予約</a>
+  <a href="tel:0120340884">📞 電話</a>
+  <a href="https://kuki884.com/menu/shichigosan/">料金詳細</a>
+</nav>
+
+<!-- ===== CAMPAIGN ===== -->
+<div class="campaign">
+  <strong>🎉 前撮りキャンペーン実施中</strong>
+  <p>2〜5月の撮影料が50%OFF！早めのご予約がおトクです。</p>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="七五三の家族写真イメージ"></div>
+  <div class="hero-content container">
+    <span class="hero-badge">🌸 七五三 前撮りキャンペーン実施中</span>
+    <h1 class="hero-main">
+      衣装えらびから、<br><em>もう楽しい。</em><br>
+      <span style="font-weight: 400; font-size: .82em;">家族みんなで過ごす、<br>特別な一日にしませんか。</span>
+    </h1>
+    <p class="hero-sub">
+      久喜市で創業100年以上。<br>
+      衣装・ヘアメイク・スタジオ・家族写真まで<br>
+      七五三をまるごとたのしくお手伝いします。
+    </p>
+    <div class="hero-cta-wrap">
+      <a href="https://kuki884.com/contact/" class="btn btn-primary">📅 撮影相談・見学予約はこちら</a>
+      <div class="hero-cta-row">
+        <a href="https://line.me/R/ti/p/kuki884" class="btn btn-outline-dark">💬 LINE</a>
+        <a href="https://kuki884.com/contact/" class="btn btn-outline-dark">🌐 WEB予約</a>
+        <a href="tel:0120340884" class="btn btn-outline-dark">📞 電話</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">SCROLL</div>
+</section>
+
+<!-- ===== PHOTO STRIP ===== -->
+<div class="photo-strip" aria-label="七五三ギャラリー">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/01.jpg" alt="七五三撮影1" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/02.jpg" alt="七五三撮影2" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/03.jpg" alt="七五三撮影3" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/04.jpg" alt="七五三撮影4" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/05.jpg" alt="七五三撮影5" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/06.jpg" alt="七五三撮影6" loading="lazy">
+  <img src="https://kuki884.com/hayashi/images/depth/753/gallery/07.jpg" alt="七五三撮影7" loading="lazy">
+</div>
+
+<!-- ===== 1. EMPATHY ===== -->
+<section class="section section--cream">
+  <div class="container">
+    <span class="section-label">FOR MAMA</span>
+    <h2 class="section-title">七五三、<br>こんな不安ありませんか？</h2>
+    <div class="divider"></div>
+
+    <div class="worries-grid">
+      <div class="worry-card">
+        <div class="worry-icon">😢</div>
+        <p class="worry-text">人見知りで<br>笑ってくれるか<br>不安…</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">👘</div>
+        <p class="worry-text">着物を<br>嫌がらないか<br>心配…</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">👶</div>
+        <p class="worry-text">兄弟も一緒に<br>撮れるか<br>知りたい</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">👨‍👩‍👧</div>
+        <p class="worry-text">家族写真も<br>ちゃんと<br>残したい</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">👗</div>
+        <p class="worry-text">パパママも<br>着物を<br>着てみたい</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">🤔</div>
+        <p class="worry-text">どこの<br>写真館を<br>選べばいい？</p>
+      </div>
+    </div>
+
+    <div class="empathy-close">
+      <strong>林写真館なら、<br>そんな不安もまるごと相談できます。</strong><br>
+      <span style="font-size: 13px; font-family: 'Hiragino Sans', sans-serif; color: var(--brown-lt);">
+        初めての方も、お気軽にどうぞ。<br>「まだ何も決まっていない」でも大歓迎です。
+      </span>
+    </div>
+
+    <div class="inline-cta">
+      <p>まずは気軽に相談してみませんか？</p>
+      <div class="inline-cta-btns">
+        <a href="https://kuki884.com/contact/"><span class="btn-sm-gold">📅 無料相談はこちら</span></a>
+        <a href="tel:0120340884"><span class="btn-sm-outline">📞 0120-34-0884</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. REASONS ===== -->
+<section class="section section--white">
+  <div class="container">
+    <span class="section-label">WHY HAYASHI</span>
+    <h2 class="section-title">初めての七五三でも安心。<br>林写真館が選ばれる理由</h2>
+    <div class="divider"></div>
+
+    <div class="reason-list">
+      <div class="reason-card">
+        <div class="reason-num">1</div>
+        <div class="reason-body">
+          <p class="reason-title">子ども慣れしたスタッフが<br>自然な笑顔を引き出します</p>
+          <p class="reason-desc">泣いても、ぐずっても、人見知りでも大丈夫。おもちゃや遊びを使いながら、自然と笑顔が出る雰囲気づくりが得意なスタッフが対応します。「撮らされている感」のない、その子らしい表情を残します。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">2</div>
+        <div class="reason-body">
+          <p class="reason-title">6つのスタジオ＋<br>ガーデンスタジオで飽きずに撮れる</p>
+          <p class="reason-desc">和室、洋室、ガーデンなど個性の異なるスタジオが揃っています。場面転換で気分も切り替わり、お子さまも飽きずに楽しく撮影できます。「もう一枚！」と自然に笑顔が増えていきます。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">3</div>
+        <div class="reason-body">
+          <p class="reason-title">衣装が豊富で<br>着物もドレスも楽しめる</p>
+          <p class="reason-desc">衣装数は約700点以上。七五三の着物だけでなく、ドレス・カジュアル・タキシード・兜など、お子さまの好みに合わせて選べます。ブランド衣装や新作も随時入荷。衣装選びからワクワクが始まります。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">4</div>
+        <div class="reason-body">
+          <p class="reason-title">美容室併設で<br>ヘアメイク・着付けも安心</p>
+          <p class="reason-desc">プロのヘアメイクと着付けも館内で完結。バラバラに予約する必要がなく、当日はここへ来るだけ。ママの着物着付けにも対応しています。まとめてお任せできるから、当日は余裕を持って過ごせます。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">5</div>
+        <div class="reason-body">
+          <p class="reason-title">家族写真・兄弟写真も<br>大切に残せます</p>
+          <p class="reason-desc">七五三は、家族みんなで着物を着て記念を残せる数少ない機会。ご兄弟との写真、パパママ・おじいちゃんおばあちゃんとの家族写真も、同じ日にまとめて撮影できます。</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">6</div>
+        <div class="reason-body">
+          <p class="reason-title">久喜市で100年以上続く<br>地元写真館の安心感</p>
+          <p class="reason-desc">創業100年以上の地域密着写真館として、久喜市の皆さまの記念日を撮り続けてきました。「ここで成人式を撮ったから、七五三も」という親子二世代のお客様も多く来店されています。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="inline-cta">
+      <p>どんな些細なことも、まずはご相談ください。</p>
+      <div class="inline-cta-btns">
+        <a href="https://kuki884.com/contact/"><span class="btn-sm-gold">相談・見学を予約</span></a>
+        <a href="https://kuki884.com/menu/shichigosan/shichigosan-dress-kimono/"><span class="btn-sm-outline">衣装を見てみる</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. GALLERY ===== -->
+<section class="section section--cream">
+  <div class="container">
+    <span class="section-label">GALLERY</span>
+    <h2 class="section-title">「うちの子も、こんな風に撮りたい」</h2>
+    <div class="divider"></div>
+    <p class="section-sub">写真でイメージが膨らんだら、ぜひお気軽にご相談ください。</p>
+
+    <div class="tag-row">
+      <span class="tag">😊 笑顔の七五三</span>
+      <span class="tag">👨‍👩‍👧‍👦 家族みんなで</span>
+      <span class="tag">👭 兄弟姉妹</span>
+      <span class="tag">👘 パパママ着物</span>
+      <span class="tag">🌿 ガーデン</span>
+      <span class="tag">⛩️ 神社ロケ</span>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item wide">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/01.jpg"
+               alt="七五三 笑顔撮影" loading="lazy"
+               onerror="this.style.display='none';this.parentNode.classList.add('ph')">
+        </div>
+        <div class="gallery-caption">人見知りさんも、遊びながら自然な笑顔に</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/02.jpg"
+               alt="家族写真 七五三" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">七五三は、家族写真を残す最高のタイミング</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/03.jpg"
+               alt="兄弟撮影 七五三" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">兄弟並んで、この瞬間は一生に一度</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/04.jpg"
+               alt="七五三 着物" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">おじいちゃんおばあちゃんにも喜ばれる一枚</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/05.jpg"
+               alt="ガーデンスタジオ 七五三" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">ガーデンでのびのびと、自然な表情を</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/06.jpg"
+               alt="七五三 ドレス" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">着物もドレスも、どちらも着てみよう</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-img-wrap">
+          <img src="https://kuki884.com/hayashi/images/depth/753/gallery/07.jpg"
+               alt="神社ロケーション 七五三" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="gallery-caption">神社での本番も、着物レンタルで安心</div>
+      </div>
+    </div>
+
+    <p class="mt-24" style="text-align:center; font-size:13px; color:var(--brown-lt); font-family:'Hiragino Sans',sans-serif;">
+      ↑ 写真は実際の撮影イメージです。詳細は
+      <a href="https://kuki884.com/menu/shichigosan/shichigosan-photo/" style="color:var(--coral); text-decoration:underline;">フォトギャラリー</a>
+      でご覧いただけます。
+    </p>
+  </div>
+</section>
+
+<!-- ===== 4. STUDIO ===== -->
+<section class="section section--white">
+  <div class="container">
+    <span class="section-label">STUDIO</span>
+    <h2 class="section-title">6つのスタジオ＋ガーデンで<br>飽きずに楽しく撮れる</h2>
+    <div class="divider"></div>
+    <p class="studio-intro">
+      撮影は「飽きないこと」「動き回れること」が大事。<br>
+      林写真館には個性の異なるスタジオが揃っていて、<br>
+      場所を変えながら最高の表情を引き出していきます。
+    </p>
+
+    <div class="studio-grid">
+      <div class="studio-card">
+        <div class="studio-img">🌿</div>
+        <div class="studio-info">
+          <p class="studio-name">ガーデンスタジオ</p>
+          <p class="studio-note">自然光たっぷりの開放的な庭。子どもが走り回れる空間で、のびのびした表情を撮影。</p>
+        </div>
+      </div>
+      <div class="studio-card">
+        <div class="studio-img">🎋</div>
+        <div class="studio-info">
+          <p class="studio-name">和室スタジオ</p>
+          <p class="studio-note">着物姿が映える落ち着いた和の空間。七五三らしい凛とした一枚を。</p>
+        </div>
+      </div>
+      <div class="studio-card">
+        <div class="studio-img">🏰</div>
+        <div class="studio-info">
+          <p class="studio-name">洋室スタジオ</p>
+          <p class="studio-note">おしゃれな背景でドレス姿もばっちり。着物との雰囲気の違いが楽しめます。</p>
+        </div>
+      </div>
+      <div class="studio-card">
+        <div class="studio-img">🌟</div>
+        <div class="studio-info">
+          <p class="studio-name">ワクワクスタジオ</p>
+          <p class="studio-note">子どもが思わずはしゃいでしまう楽しい空間。自然な笑顔がどんどん出てきます。</p>
+        </div>
+      </div>
+      <div class="studio-card">
+        <div class="studio-img">🌸</div>
+        <div class="studio-info">
+          <p class="studio-name">季節スタジオ</p>
+          <p class="studio-note">四季を感じる背景セットで、特別感のある一枚に。</p>
+        </div>
+      </div>
+      <div class="studio-card">
+        <div class="studio-img">✨</div>
+        <div class="studio-info">
+          <p class="studio-name">シンプルスタジオ</p>
+          <p class="studio-note">すっきりした背景で、主役のお子さまと家族の表情を大切に残します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="studio-feature">
+      <p>スタジオの詳細は<a href="https://kuki884.com/menu/shichigosan/shichigosan-studio/" style="color:var(--coral); text-decoration:underline;">スタジオ紹介ページ</a>でご覧いただけます。<br>
+      見学だけでもOKです。お気軽にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. FLOW ===== -->
+<section class="section section--beige">
+  <div class="container">
+    <span class="section-label">FLOW</span>
+    <h2 class="section-title">七五三撮影の流れ</h2>
+    <div class="divider"></div>
+    <p class="section-sub">当日どんな流れになるか、あらかじめわかっていると安心ですよね。</p>
+
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">1</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 01</p>
+          <p class="flow-name">ご相談・ご予約</p>
+          <p class="flow-desc">LINEやWEB、お電話からお気軽にご相談ください。まだ何も決まっていなくてもOK。撮影時期や衣装のこと、何でも聞いていただけます。</p>
+          <span class="flow-tag">💬 LINE / 🌐 WEB / 📞 電話</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">2</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 02</p>
+          <p class="flow-name">衣装選び</p>
+          <p class="flow-desc">約700点の衣装の中から、お子さまのお気に入りを選んでいただきます。事前見学も大歓迎です。着物・ドレス・カジュアルとよりどりみどり。</p>
+          <span class="flow-tag">👘 事前見学OK</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">3</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 03</p>
+          <p class="flow-name">ヘアメイク・着付け</p>
+          <p class="flow-desc">プロのスタッフがお子さまをかわいく仕上げます。ママの着付けやヘアセットも館内で対応。バタバタしなくていいので、朝から余裕が持てます。</p>
+          <span class="flow-tag">💄 美容室併設</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">4</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 04</p>
+          <p class="flow-name">スタジオ撮影</p>
+          <p class="flow-desc">複数のスタジオを使って、いろんな表情・シーンを撮影します。笑顔が出なくても焦らなくて大丈夫。スタッフが全力でお子さまの心をほぐします。</p>
+          <span class="flow-tag">📸 6スタジオ＋ガーデン</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">5</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 05</p>
+          <p class="flow-name">家族写真・兄弟写真</p>
+          <p class="flow-desc">せっかく家族みんなで来たなら、家族写真も残しましょう。パパ・ママ・おじいちゃんおばあちゃんとの一枚は、一生の宝物になります。</p>
+          <span class="flow-tag">👨‍👩‍👧‍👦 家族・兄弟写真も撮れます</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">6</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 06</p>
+          <p class="flow-name">写真選び</p>
+          <p class="flow-desc">大きなモニターでゆっくりお選びいただけます。自宅からネットでセレクトすることもできるので、じっくり選べます。</p>
+          <span class="flow-tag">💻 ネットセレクト対応</span>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left">
+          <div class="flow-circle">7</div>
+        </div>
+        <div class="flow-body">
+          <p class="flow-step">STEP 07</p>
+          <p class="flow-name">商品お渡し</p>
+          <p class="flow-desc">ご注文から約40〜60日でお届けします。アルバムやプリント、データなどお好みの形で大切な写真を手元に残せます。</p>
+          <span class="flow-tag">📦 40〜60日でお届け</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. PRICING ===== -->
+<section class="section section--white">
+  <div class="container">
+    <span class="section-label">PLAN &amp; PRICE</span>
+    <h2 class="section-title">七五三撮影プラン</h2>
+    <div class="divider"></div>
+    <p class="section-sub">衣装・ヘアメイク・着付けが含まれた安心のパッケージです。<br>まずはお気軽にご相談ください。</p>
+
+    <div class="pricing-note">
+      <strong>🎁 撮影料 期間限定キャンペーン</strong>
+      <p>
+        2〜5月は撮影料50%OFF ／ 6〜7月は40%OFF<br>
+        8月は30%OFF ／ 9〜10月は20%OFF
+      </p>
+    </div>
+
+    <div class="plan-cards">
+      <!-- C PLAN -->
+      <div class="plan-card">
+        <div class="plan-header c">
+          <div class="plan-badge c">C</div>
+          <div class="plan-head-text">
+            <p class="plan-name">Cプラン　スタジオ撮影のみ</p>
+            <p class="plan-tagline">スタジオ撮影だけ、お手軽に</p>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-ages">
+            <div class="plan-age">
+              <p class="plan-age-label">3歳</p>
+              <p class="plan-age-price">¥18,700<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">5歳</p>
+              <p class="plan-age-price">¥16,500<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">7歳</p>
+              <p class="plan-age-price">¥26,400<small>〜（税込）</small></p>
+            </div>
+          </div>
+          <p class="plan-includes">撮影料＋プリント1枚＋衣装レンタル＋ヘアメイク・着付け含む<br>※神社へのお出かけは別途レンタル料が必要</p>
+        </div>
+      </div>
+
+      <!-- B PLAN -->
+      <div class="plan-card">
+        <div class="plan-header b">
+          <div class="plan-badge b">B</div>
+          <div class="plan-head-text">
+            <p class="plan-name">Bプラン　撮影＋神社お出かけ（当日）</p>
+            <p class="plan-tagline">撮影してそのまま神社へ！</p>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-ages">
+            <div class="plan-age">
+              <p class="plan-age-label">3歳</p>
+              <p class="plan-age-price">¥37,400<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">5歳</p>
+              <p class="plan-age-price">¥31,900<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">7歳</p>
+              <p class="plan-age-price">¥42,900<small>〜（税込）</small></p>
+            </div>
+          </div>
+          <p class="plan-includes">撮影料＋プリント1枚＋衣装レンタル（外出用）＋ヘアメイク・着付け含む<br>※同日撮影・神社お参りがセットになったお得なプラン</p>
+        </div>
+      </div>
+
+      <!-- A PLAN -->
+      <div class="plan-card">
+        <div class="plan-header a">
+          <div class="plan-badge a">A</div>
+          <div class="plan-head-text">
+            <p class="plan-name">Aプラン　前撮り＋秋の神社お出かけ</p>
+            <p class="plan-tagline">撮影と参拝を別日でゆったりと</p>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-ages">
+            <div class="plan-age">
+              <p class="plan-age-label">3歳</p>
+              <p class="plan-age-price">¥40,700<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">5歳</p>
+              <p class="plan-age-price">¥33,000<small>〜（税込）</small></p>
+            </div>
+            <div class="plan-age">
+              <p class="plan-age-label">7歳</p>
+              <p class="plan-age-price">¥53,900<small>〜（税込）</small></p>
+            </div>
+          </div>
+          <p class="plan-includes">前撮り（2〜7月）＋秋の神社お出かけ（10〜11月）の2回利用<br>撮影料＋プリント1枚＋衣装レンタル2回分＋ヘアメイク・着付け含む</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Album accordion -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open')">
+        <span>📚 アルバムプランを見る（¥51,700〜）</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <p>林写真館では豊富なアルバムプランをご用意しています。撮影料が10月まで無料（11月は半額）になるプランもあり、アルバムに仕上げることで一生残る作品になります。</p>
+        <br>
+        <p>
+          ・キッズアルバム　¥51,700〜<br>
+          ・フェアリーテールアルバム　¥66,000〜<br>
+          ・ダイシーアルバム（ママ着物・家族写真付き）　¥96,800〜<br>
+          ・ファンタジアアルバム（ママ着物・家族写真付き）　¥103,400〜<br>
+          ・クラッシーアルバム　¥126,500〜<br>
+          ・クリスタルアルバム（パパ・ママ着物・家族写真付き）　¥143,000〜<br>
+          ・スマイルアルバム　¥184,800〜<br>
+          ・ハッピーアルバム　¥217,800〜
+        </p>
+        <br>
+        <a href="https://kuki884.com/menu/shichigosan/" style="color:var(--gold-dark); text-decoration:underline; font-size:13px;">▶ 詳しいアルバム内容はこちら</a>
+      </div>
+    </div>
+
+    <div class="pricing-disclaimer">
+      ※ 上記料金は一例です。衣装のランクアップや追加オプションにより異なる場合があります。<br>
+      ※ 撮影料の割引は時期によって異なります。<br>
+      ※ 最新の料金・プランは<a href="https://kuki884.com/menu/shichigosan/">公式ページ</a>または店頭でご確認ください。<br>
+      ※ まずは「相談だけ」「見学だけ」でも大歓迎です。
+    </div>
+
+    <div class="inline-cta">
+      <p>「まだ何も決まっていない」でも大丈夫。一緒に考えます。</p>
+      <div class="inline-cta-btns">
+        <a href="https://kuki884.com/contact/"><span class="btn-sm-gold">無料相談はこちら</span></a>
+        <a href="https://kuki884.com/menu/shichigosan/"><span class="btn-sm-outline">料金詳細を見る</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. VOICE ===== -->
+<section class="section section--pink">
+  <div class="container">
+    <span class="section-label">VOICE</span>
+    <h2 class="section-title">ご来店いただいたお客様の声</h2>
+    <div class="divider"></div>
+
+    <div class="voices">
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-quote">"</div>
+        <p class="voice-text">最初はぐずってたのに、スタッフの方が上手に遊んでくれて、いつの間にか笑顔いっぱいの写真が撮れていました。「どうせ泣くだろうな…」と思っていた私が恥ずかしいくらい。来てよかったです。</p>
+        <p class="voice-meta">久喜市 / 3歳女の子のママ</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-quote">"</div>
+        <p class="voice-text">家族みんなで着物を着て撮影できたのが最高の思い出になりました。義父母もすごく喜んでくれて。スタジオも広くて、子どもが飽きないうちにいろんな写真が撮れました。</p>
+        <p class="voice-meta">久喜市周辺 / 5歳男の子のママ</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-quote">"</div>
+        <p class="voice-text">上の子のときから林写真館にお世話になっています。スタッフの方が子どもの名前を覚えてくれていて、地元の写真館ならではの温かさを感じます。今回も最高の一枚が撮れました。</p>
+        <p class="voice-meta">久喜市 / 7歳女の子のママ</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <div class="voice-quote">"</div>
+        <p class="voice-text">兄弟2人まとめて撮っていただきました。衣装もたくさんあって、2人それぞれのこだわりを尊重してもらえてよかったです。写真選びのときに泣きそうになるくらいいい写真ばかりで困りました（笑）</p>
+        <p class="voice-meta">加須市 / 姉妹のママ</p>
+      </div>
+    </div>
+
+    <p class="mt-24 text-center" style="font-size:12px; color:var(--brown-lt); font-family:'Hiragino Sans',sans-serif;">
+      ※ 上記はイメージコメントです。実際の口コミは
+      <a href="https://www.facebook.com/kuki884?sk=reviews" style="color:var(--coral); text-decoration:underline;">Facebookページ</a>
+      でご覧いただけます。
+    </p>
+  </div>
+</section>
+
+<!-- ===== 8. FAQ ===== -->
+<section class="section section--white">
+  <div class="container">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">よくある質問</h2>
+    <div class="divider"></div>
+
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>人見知りでも大丈夫ですか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          大丈夫です！人見知りのお子さまのご来店はとても多いです。スタッフがおもちゃや遊びを使いながら、ゆっくりと距離を縮めていきます。焦らず、お子さまのペースを大切にしながら撮影しますので、まずはお気軽にご来店ください。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>着物を嫌がったらどうなりますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          着物が苦手なお子さまもいらっしゃいます。ドレスやカジュアルウェアなど、お子さまが喜んで着てくれる衣装に変更することもできます。無理に着せて撮影しても良い写真は撮れません。お子さまが笑顔になれる服装を一緒に考えましょう。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>兄弟も一緒に撮れますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          もちろんです！兄弟・姉妹みんなで一緒の撮影は大歓迎です。七五三を迎えるお子さまと一緒に、兄弟姉妹の写真も残せます。せっかくみんなでおしゃれをするタイミングですので、ぜひ一緒に撮影しましょう。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>パパ・ママも着物を着られますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          はい、着物のレンタル・ヘアセット・着付けに対応しています。パパの紋付袴、ママの振袖・訪問着など、家族みんなで着物姿の写真は一生の思い出に。おじいちゃんおばあちゃんも大変喜ばれます。詳しくはお問い合わせください。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>家族写真も撮れますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          七五三の撮影の中で、家族写真・祖父母との集合写真も撮影できます。お孫さんの七五三に来られたおじいちゃんおばあちゃんと一緒の写真は特に喜ばれます。あとから「撮っておけばよかった」と後悔しないよう、ぜひご相談ください。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>衣装見学だけでもできますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          もちろんです。まずは衣装を見てみたい、スタジオの雰囲気を確かめたいというお客様も大歓迎です。見学は無料ですので、お気軽にご来店ください。事前にご連絡いただけるとスムーズです。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>神社へのお出かけはできますか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          はい、Bプランでは撮影後そのまま神社へお出かけいただけます（衣装そのままでOK）。Aプランでは前撮りと秋の神社お参りを別日でお楽しみいただけます。どちらのスタイルも対応していますので、お好みでお選びください。
+        </div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          <span class="faq-q-icon">Q</span>
+          <span>予約はいつ頃がおすすめですか？</span>
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-a">
+          <span class="faq-a-icon">A</span>
+          七五三のピーク（10〜11月）は大変混み合います。前撮りキャンペーンを利用した2〜5月の早めの撮影がお得でおすすめです。お子さまもまだ暑くないのでぐずりにくく、写真映えする季節でもあります。当日のご予約も空きがあれば対応しますが、お早めのご相談をおすすめします。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. PHOTOGRAPHERS ===== -->
+<section class="section section--cream">
+  <div class="container">
+    <span class="section-label">PHOTOGRAPHER</span>
+    <h2 class="section-title">カメラマン紹介</h2>
+    <div class="divider"></div>
+    <p class="section-sub">
+      子どもの自然な笑顔を引き出すために、<br>スタッフ全員が日々研鑽を積んでいます。
+    </p>
+
+    <div class="photographers">
+      <div class="photographer-card featured">
+        <div class="photographer-img">📸</div>
+        <div class="photographer-info">
+          <p class="photographer-role">PHOTOGRAPHER / DIRECTOR</p>
+          <p class="photographer-name">よーへーこと　林 洋平</p>
+          <p class="photographer-msg">「子どもとの信頼関係を築くことが、最高の一枚への近道。泣いても、ぐずっても、諦めません。」スタッフブログも更新中です。</p>
+        </div>
+      </div>
+      <div class="photographer-card">
+        <div class="photographer-img">🌸</div>
+        <div class="photographer-info">
+          <p class="photographer-role">PHOTOGRAPHER</p>
+          <p class="photographer-name">スタッフ A</p>
+          <p class="photographer-msg">女の子の撮影が得意。着物姿のかわいさを最大限に引き出します。</p>
+        </div>
+      </div>
+      <div class="photographer-card">
+        <div class="photographer-img">⚡</div>
+        <div class="photographer-info">
+          <p class="photographer-role">PHOTOGRAPHER</p>
+          <p class="photographer-name">スタッフ B</p>
+          <p class="photographer-msg">元気な男の子も安心！動き回る瞬間もしっかり捉えます。</p>
+        </div>
+      </div>
+      <div class="photographer-card">
+        <div class="photographer-img">🌿</div>
+        <div class="photographer-info">
+          <p class="photographer-role">HAIR &amp; MAKEUP</p>
+          <p class="photographer-name">美容スタッフ C</p>
+          <p class="photographer-msg">お子さまの繊細な髪も丁寧に。早くておしゃれなヘアセットが人気。</p>
+        </div>
+      </div>
+      <div class="photographer-card">
+        <div class="photographer-img">🎀</div>
+        <div class="photographer-info">
+          <p class="photographer-role">STYLIST</p>
+          <p class="photographer-name">スタイリスト D</p>
+          <p class="photographer-msg">衣装選びのプロ。お子さまの個性に合ったコーディネートを提案します。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-24 text-center" style="font-size:12px; color:var(--brown-lt); font-family:'Hiragino Sans',sans-serif;">
+      ※ スタッフ詳細は<a href="https://kuki884.com/staff/" style="color:var(--coral); text-decoration:underline;">スタッフ紹介ページ</a>でご覧いただけます。
+    </p>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <span class="section-label">CONTACT</span>
+    <h2 class="section-title">七五三のこと、<br>まずは気軽にご相談ください。</h2>
+    <div class="divider"></div>
+    <p class="final-cta-sub">
+      衣装のこと、料金のこと、撮影時期のこと。<br>
+      まだ何も決まっていなくても大丈夫です。<br>
+      お子さまに合った七五三の残し方を、<br>一緒に考えます。
+    </p>
+
+    <div class="cta-buttons">
+      <a href="https://line.me/R/ti/p/kuki884" class="btn-cta-line">
+        <span>💬</span> LINEで相談する
+      </a>
+      <a href="https://kuki884.com/contact/" class="btn-cta-web">
+        <span>📅</span> WEB予約する
+      </a>
+      <a href="tel:0120340884" class="btn-cta-tel">
+        <span>📞</span> 0120-34-0884
+      </a>
+      <a href="https://kuki884.com/menu/shichigosan/shichigosan-dress-kimono/" class="btn-cta-dress">
+        <span>👘</span> 衣装見学を予約する
+      </a>
+    </div>
+
+    <div class="final-info">
+      <p>
+        <strong style="color:var(--brown);">林写真館</strong><br>
+        〒346-0003 埼玉県久喜市久喜中央3-8-22<br>
+        TEL：0120-34-0884<br>
+        営業時間：9:00〜18:30　月曜定休
+      </p>
+      <p style="margin-top:12px;">
+        <a href="https://kuki884.com/company#access">アクセスマップはこちら</a>
+        　｜
+        <a href="https://kuki884.com/menu/shichigosan/">七五三ページへ戻る</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Smooth accordion toggle (already handled inline, this is for any future use)
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Intersection Observer for subtle fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reason-card, .flow-item, .voice-card, .studio-card, .photographer-card, .worry-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
