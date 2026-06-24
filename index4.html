@@ -224,10 +224,21 @@
   .btn-outline-dark:active { background: rgba(240,120,96,.08); }
   .hero-cta-row {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     margin-top: 4px;
+    justify-content: center;
   }
-  .hero-cta-row .btn-outline-dark { flex: 1; font-size: 12px; padding: 11px 8px; }
+  .hero-cta-row .btn-outline-dark {
+    flex: 1;
+    font-size: 11px;
+    padding: 11px 4px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
   .hero-scroll {
     position: absolute;
     bottom: 14px;
@@ -1136,7 +1147,6 @@
     </div>
     <div class="hero-overlay"></div>
     <span class="hero-badge hero-badge-float">🌸 七五三 前撮りキャンペーン実施中</span>
-    <div class="hero-scroll">SCROLL</div>
   </div>
   <div class="hero-content container">
     <h1 class="hero-main">
