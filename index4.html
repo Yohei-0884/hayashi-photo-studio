@@ -16,7 +16,7 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
-    color: #2b2420;
+    color: #4a3a30;
     background: #fff;
     line-height: 1.85;
     font-size: 15px;
@@ -27,22 +27,22 @@
 
   /* ============ CSS VARIABLES ============ */
   :root {
-    --cream:    #faf7f2;
-    --beige:    #f3ece2;
-    --pink:     #f5e8e1;
-    --pink-mid: #c98f78;
-    --coral:    #b9694e;
-    --coral-lt: #f0ddd2;
-    --sage:     #5e8473;
-    --sage-lt:  #e7eee9;
-    --gold:     #b8923a;
-    --gold-dark:#8f6f24;
-    --brown:    #2b2420;
-    --brown-lt: #6b5d54;
+    --cream:    #fffaf3;
+    --beige:    #fbf1e6;
+    --pink:     #fdebe5;
+    --pink-mid: #ecaa92;
+    --coral:    #e8825f;
+    --coral-lt: #fbe2d6;
+    --sage:     #7faa92;
+    --sage-lt:  #eef6f1;
+    --gold:     #dcae45;
+    --gold-dark:#b8842a;
+    --brown:    #4a3a30;
+    --brown-lt: #8a7a6e;
     --white:    #ffffff;
-    --shadow:   0 8px 28px rgba(43,36,32,.10);
-    --radius:   10px;
-    --line:     rgba(43,36,32,.12);
+    --shadow:   0 8px 26px rgba(232,130,95,.14);
+    --radius:   14px;
+    --line:     rgba(74,58,48,.12);
     --font-serif: 'Shippori Mincho', 'Hiragino Mincho ProN', serif;
     --font-sans:  'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
   }
@@ -124,7 +124,7 @@
     font-family: var(--font-sans);
   }
   .top-nav a.primary {
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
     border-color: var(--coral);
   }
@@ -185,7 +185,7 @@
     letter-spacing: .18em;
     padding: 6px 18px;
     margin-bottom: 20px;
-    border-radius: 4px;
+    border-radius: 50px;
     font-family: var(--font-sans);
     font-weight: 600;
   }
@@ -217,7 +217,7 @@
     display: block;
     text-align: center;
     padding: 16px 20px;
-    border-radius: 8px;
+    border-radius: 50px;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: .05em;
@@ -226,9 +226,9 @@
     cursor: pointer;
   }
   .btn-primary {
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
-    box-shadow: 0 6px 20px rgba(43,36,32,.25);
+    box-shadow: 0 6px 20px rgba(232,130,95,.35);
   }
   .btn-primary:active { opacity: .9; transform: scale(.98); }
   .btn-outline-dark {
@@ -347,7 +347,7 @@
     border: 1.5px solid var(--pink);
   }
   .reason-num {
-    background: linear-gradient(160deg, var(--coral), #9c4d36);
+    background: linear-gradient(160deg, var(--coral), #f0a070);
     color: #fff;
     font-size: 22px;
     font-weight: 700;
@@ -414,7 +414,7 @@
     z-index: 2;
   }
   .retouch-tag--before { background: rgba(120,110,100,.85); }
-  .retouch-tag--after { background: linear-gradient(135deg, var(--coral), #9c4d36); }
+  .retouch-tag--after { background: linear-gradient(135deg, var(--coral), #f0a070); }
   .retouch-caption {
     text-align: center;
     font-size: 13px;
@@ -437,7 +437,7 @@
   .tab-btn {
     white-space: nowrap;
     padding: 8px 16px;
-    border-radius: 6px;
+    border-radius: 50px;
     border: 1.5px solid var(--line);
     background: #fff;
     color: var(--brown-lt);
@@ -660,7 +660,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -705,13 +705,13 @@
 
   /* ============ 6. PRICING ============ */
   .pricing-note {
-    background: linear-gradient(135deg, var(--gold), #8f6f24);
+    background: linear-gradient(135deg, var(--gold), #f0c068);
     color: #fff;
     border-radius: var(--radius);
     padding: 20px;
     text-align: center;
     margin-bottom: 28px;
-    box-shadow: 0 4px 20px rgba(184,146,58,.25);
+    box-shadow: 0 4px 20px rgba(220,174,69,.3);
   }
   .pricing-note p { font-size: 13px; line-height: 1.8; font-family: var(--font-sans); }
   .pricing-note strong { font-size: 18px; display: block; margin-bottom: 6px; }
@@ -731,9 +731,9 @@
     gap: 12px;
     border-bottom: 1.5px solid var(--beige);
   }
-  .plan-header.a { background: #f7ede0; }
-  .plan-header.b { background: #efeaf2; }
-  .plan-header.c { background: #e9eef0; }
+  .plan-header.a { background: #fdf3e3; }
+  .plan-header.b { background: #f6f0fa; }
+  .plan-header.c { background: #eef5fa; }
   .plan-badge {
     width: 36px; height: 36px;
     border-radius: 50%;
@@ -745,9 +745,9 @@
     color: #fff;
     flex-shrink: 0;
   }
-  .plan-badge.a { background: linear-gradient(135deg, var(--coral), #9c4d36); }
-  .plan-badge.b { background: #6f5f93; }
-  .plan-badge.c { background: #466e98; }
+  .plan-badge.a { background: linear-gradient(135deg, var(--coral), #f0a070); }
+  .plan-badge.b { background: #a591c9; }
+  .plan-badge.c { background: #6fa3cf; }
   .plan-head-text .plan-name { font-size: 16px; font-weight: 700; }
   .plan-head-text .plan-tagline { font-size: 12px; color: var(--brown-lt); font-family: var(--font-sans); margin-top: 2px; }
   .plan-body { padding: 16px 20px; }
@@ -855,7 +855,7 @@
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -937,7 +937,7 @@
   }
   .coupon-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -991,7 +991,7 @@
   .btn-cta-line {
     background: #06c755;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 18px;
     font-size: 16px;
     font-weight: 700;
@@ -1003,9 +1003,9 @@
     box-shadow: 0 4px 16px rgba(6,199,85,.3);
   }
   .btn-cta-web {
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 18px;
     font-size: 16px;
     font-weight: 700;
@@ -1020,7 +1020,7 @@
     border: 2px solid var(--line);
     color: var(--brown);
     background: #fff;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 16px;
     font-size: 15px;
     font-weight: 700;
@@ -1034,7 +1034,7 @@
     border: 2px solid var(--sage);
     color: var(--sage);
     background: var(--sage-lt);
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 15px;
     font-size: 14px;
     font-weight: 600;
@@ -1067,9 +1067,9 @@
   .inline-cta-btns { display: flex; gap: 10px; }
   .inline-cta-btns a { flex: 1; }
   .btn-sm-gold {
-    background: linear-gradient(135deg, var(--coral), #9c4d36);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 13px 8px;
     font-size: 13px;
     font-weight: 700;
@@ -1081,7 +1081,7 @@
   .btn-sm-outline {
     border: 2px solid var(--line);
     color: var(--coral);
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 12px 8px;
     font-size: 13px;
     font-weight: 600;
@@ -1093,7 +1093,7 @@
 
   /* ============ CAMPAIGN BANNER ============ */
   .campaign {
-    background: linear-gradient(135deg, var(--coral), #8f4a32);
+    background: linear-gradient(135deg, var(--coral), #f0a070);
     color: #fff;
     padding: 20px 24px;
     text-align: center;
@@ -1124,7 +1124,7 @@
   .mt-24 { margin-top: 24px; }
   .mt-40 { margin-top: 40px; }
   .tag-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 24px; }
-  .tag { background: var(--beige); border-radius: 6px; padding: 5px 14px; font-size: 12px; color: var(--brown-lt); font-family: var(--font-sans); }
+  .tag { background: var(--beige); border-radius: 50px; padding: 5px 14px; font-size: 12px; color: var(--brown-lt); font-family: var(--font-sans); }
 </style>
 </head>
 
