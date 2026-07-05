@@ -921,6 +921,22 @@
     border-top: 1px dashed #e8c9c0;
     padding-top: 14px;
   }
+  .coupon-disclaimer {
+    font-size: 11px;
+    color: var(--brown-lt);
+    font-family: var(--font-sans);
+    margin-top: 8px;
+    opacity: .8;
+  }
+  /* Instagram coupon variant */
+  .coupon-card--insta {
+    border-color: #c13584;
+    background: linear-gradient(160deg, #fff0f8 0%, #fff5f0 100%);
+    box-shadow: 0 6px 24px rgba(193,53,132,.18);
+  }
+  .coupon-badge--insta {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d 50%, #fcb045);
+  }
 
   /* ============ FINAL CTA ============ */
   .final-cta {
@@ -1132,11 +1148,12 @@
 <!-- ===== COUPON (HERO下) ===== -->
 <section class="coupon-section">
   <div class="container">
-    <div class="coupon-card">
-      <span class="coupon-badge">インスタ限定クーポン</span>
+    <div class="coupon-card coupon-card--insta">
+      <span class="coupon-badge coupon-badge--insta">インスタ限定クーポン</span>
       <p class="coupon-title">アルバムコースをご注文の方</p>
       <p class="coupon-amount">¥5,000<span>OFF</span></p>
       <p class="coupon-note">予約時にこの画面をスタッフにお見せください。</p>
+      <p class="coupon-disclaimer">※他クーポンと併用できません</p>
     </div>
   </div>
 </section>
@@ -2001,11 +2018,12 @@
 <!-- ===== COUPON ===== -->
 <section class="coupon-section">
   <div class="container">
-    <div class="coupon-card">
-      <span class="coupon-badge">インスタ限定クーポン</span>
+    <div class="coupon-card coupon-card--insta">
+      <span class="coupon-badge coupon-badge--insta">インスタ限定クーポン</span>
       <p class="coupon-title">アルバムコースをご注文の方</p>
       <p class="coupon-amount">¥5,000<span>OFF</span></p>
       <p class="coupon-note">予約時にこの画面をスタッフにお見せください。</p>
+      <p class="coupon-disclaimer">※他クーポンと併用できません</p>
     </div>
   </div>
 </section>
