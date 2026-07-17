@@ -191,10 +191,6 @@
     color:var(--charcoal);
   }
   .site-header.scrolled .logo{color:var(--charcoal);}
-  .header-cta{
-    font-size:12px; letter-spacing:0.12em; padding:11px 22px;
-  }
-
   /* ===== Hero (split panel: text left, photo right — text never overlaps the face) ===== */
   .hero{
     position:relative;
@@ -571,13 +567,13 @@
     .cta-trio .btn, .hero-actions .btn{ font-size:9.5px; padding:12px 2px; }
   }
 </style>
+<noscript><style>.fade-up{ opacity:1 !important; transform:none !important; }</style></noscript>
 </head>
 <body>
 
 <!-- ヘッダー -->
 <header class="site-header" id="siteHeader">
   <div class="logo">林写真館</div>
-  <a href="#access" class="btn btn-primary header-cta">来店予約</a>
 </header>
 
 <!-- ① ファーストビュー -->
@@ -1056,50 +1052,66 @@
 </div>
 
 <script>
-  // ヒーロー：3秒ごとに写真をクロスフェード切り替え
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  if (heroSlides.length > 1) {
-    let heroIdx = 0;
-    setInterval(() => {
-      heroSlides[heroIdx].classList.remove('active');
-      heroIdx = (heroIdx + 1) % heroSlides.length;
-      heroSlides[heroIdx].classList.add('active');
-    }, 3000);
+  // フェードイン（最優先で登録：他の処理でエラーが出てもコンテンツは必ず表示されるようにする）
+  try {
+    var fadeEls = document.querySelectorAll('.fade-up');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    fadeEls.forEach(function(el) { observer.observe(el); });
+    // 保険：画像の多い環境などでobserverが正しく発火しない場合に備え、一定時間後に強制表示
+    setTimeout(function() {
+      fadeEls.forEach(function(el) { el.classList.add('in'); });
+    }, 2500);
+  } catch (err) {
+    // フェードイン処理に失敗した場合も、最低限すべてのコンテンツを表示させる
+    document.querySelectorAll('.fade-up').forEach(function(el) { el.classList.add('in'); });
   }
+
+  // ヒーロー：3秒ごとに写真をクロスフェード切り替え
+  try {
+    var heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 1) {
+      var heroIdx = 0;
+      setInterval(function() {
+        heroSlides[heroIdx].classList.remove('active');
+        heroIdx = (heroIdx + 1) % heroSlides.length;
+        heroSlides[heroIdx].classList.add('active');
+      }, 3000);
+    }
+  } catch (err) {}
 
   // ヘッダー：スクロールで背景表示
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  });
+  try {
+    var header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  } catch (err) {}
 
   // 横スクロールギャラリー：マウスドラッグでも操作できるように（衣裳・スタジオ共通）
-  function enableDragScroll(el) {
-    if (!el) return;
-    let isDown = false, startX = 0, scrollStart = 0;
-    el.addEventListener('mousedown', (e) => {
-      isDown = true;
-      el.classList.add('dragging');
-      startX = e.pageX;
-      scrollStart = el.scrollLeft;
-    });
-    window.addEventListener('mouseup', () => { isDown = false; el.classList.remove('dragging'); });
-    window.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('dragging'); });
-    el.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      el.scrollLeft = scrollStart - (e.pageX - startX);
-    });
-  }
-  enableDragScroll(document.getElementById('collectionScroll'));
-  enableDragScroll(document.getElementById('studioScroll'));
-
-  // フェードイン
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  try {
+    function enableDragScroll(el) {
+      if (!el) return;
+      var isDown = false, startX = 0, scrollStart = 0;
+      el.addEventListener('mousedown', function(e) {
+        isDown = true;
+        el.classList.add('dragging');
+        startX = e.pageX;
+        scrollStart = el.scrollLeft;
+      });
+      window.addEventListener('mouseup', function() { isDown = false; el.classList.remove('dragging'); });
+      window.addEventListener('mouseleave', function() { isDown = false; el.classList.remove('dragging'); });
+      el.addEventListener('mousemove', function(e) {
+        if (!isDown) return;
+        e.preventDefault();
+        el.scrollLeft = scrollStart - (e.pageX - startX);
+      });
+    }
+    enableDragScroll(document.getElementById('collectionScroll'));
+    enableDragScroll(document.getElementById('studioScroll'));
+  } catch (err) {}
 </script>
 </body>
 </html>
