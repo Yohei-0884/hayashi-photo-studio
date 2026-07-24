@@ -77,8 +77,11 @@
   }
   /* mobile: keep 2 columns, tighten spacing & type so more menus fit per screen */
   @media (max-width: 560px) {
-    .grid { gap: 10px; padding: 6px 11px 10px; }
-    .body { padding: 11px 12px 13px; }
+    .grid { gap: 13px; padding: 6px 13px 10px; }
+    .card { padding: 9px 9px 0; border-radius: 14px; border-width: 2.5px; }
+    .card::before { inset: 4px; border-radius: 10px; }
+    .visual { border-radius: 8px; }
+    .body { padding: 10px 5px 12px; }
     .title { font-size: 15px; margin-bottom: 3px; }
     .sub { font-size: 11px; line-height: 1.55; }
     .more { margin-top: 9px; font-size: 11px; }
@@ -86,8 +89,9 @@
     .soon-badge { font-size: 9px; padding: 3px 8px; top: 8px; right: 8px; }
   }
   @media (max-width: 380px) {
-    .grid { gap: 8px; padding: 6px 9px 10px; }
-    .body { padding: 9px 10px 12px; }
+    .grid { gap: 11px; padding: 6px 11px 10px; }
+    .card { padding: 8px 8px 0; border-width: 2px; }
+    .body { padding: 9px 4px 11px; }
     .title { font-size: 13.5px; }
     .sub { font-size: 10px; line-height: 1.5; }
   }
@@ -95,19 +99,27 @@
   .card {
     display: block; position: relative;
     background: #fff; border-radius: 16px; overflow: hidden;
-    box-shadow: 0 6px 22px rgba(120,90,50,.10);
-    border: 1px solid rgba(198,154,76,.18);
-    transition: transform .18s ease, box-shadow .18s ease;
+    padding: 12px 12px 0;                      /* white matte frame around photo */
+    border: 3px solid var(--gold-dk);          /* bold gold outer frame */
+    box-shadow: 0 10px 26px rgba(120,90,50,.24);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  /* inner second frame line -> "二重額装" look */
+  .card::before {
+    content: ""; position: absolute; inset: 5px; z-index: 4;
+    border: 1.5px solid rgba(198,154,76,.6);
+    border-radius: 11px; pointer-events: none;
   }
   .card:active { transform: scale(.985); }
   @media (hover:hover) {
-    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(120,90,50,.18); }
+    .card:hover { transform: translateY(-3px); border-color: #8a6320;
+      box-shadow: 0 16px 36px rgba(120,90,50,.30); }
   }
 
   /* visual panel (photo OR themed) */
   .visual {
     position: relative; aspect-ratio: 1 / 1; overflow: hidden;
-    background: #f2ece2;
+    background: #f2ece2; border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
   }
   .visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -144,7 +156,7 @@
   .th-jinja { background: linear-gradient(145deg, #d76b5a 0%, #bf4638 55%, #96271c 100%); }
   .th-soon  { background: linear-gradient(145deg, #cdbfae 0%, #bbac97 55%, #ada08c 100%); }
 
-  .body { padding: 15px 16px 17px; }
+  .body { padding: 13px 8px 15px; }
   .title {
     font-family: var(--serif); font-weight: 700; font-size: 18px;
     color: var(--brown); letter-spacing: .04em; margin-bottom: 4px;
