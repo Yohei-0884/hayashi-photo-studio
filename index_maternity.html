@@ -321,11 +321,11 @@ body.ready .hero__media img{transform:none;}
 .studio{background:var(--mist);padding:var(--gap) 0;}
 .studio__grid{display:grid;gap:clamp(14px,2vw,22px);margin-top:clamp(36px,5vw,56px);}
 @media(min-width:760px){.studio__grid{grid-template-columns:repeat(2,1fr);}}
-.studio__item{margin:0;background:var(--paper);display:grid;grid-template-columns:minmax(130px,42%) 1fr;align-items:stretch;}
-.studio__fig{overflow:hidden;height:100%;}
-.studio__fig img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s cubic-bezier(.19,1,.22,1);min-height:150px;}
-.studio__item:hover .studio__fig img{transform:scale(1.05);}
-.studio__body{padding:clamp(16px,2vw,24px);align-self:center;}
+.studio__item{margin:0;background:var(--paper);}
+.studio__fig{overflow:hidden;}
+.studio__fig img{width:100%;height:auto;display:block;transition:transform 1.3s cubic-bezier(.19,1,.22,1);}
+.studio__item:hover .studio__fig img{transform:scale(1.03);}
+.studio__body{padding:clamp(16px,2.2vw,24px) clamp(16px,2.2vw,24px) clamp(20px,2.6vw,28px);}
 .studio__en{font-family:var(--latin);font-style:italic;font-size:11.5px;letter-spacing:.2em;color:var(--rose);display:block;margin-bottom:5px;}
 .studio__n{font-family:var(--disp);font-size:16.5px;font-weight:500;letter-spacing:.12em;margin:0 0 8px;}
 .studio__d{font-size:12.5px;line-height:1.95;color:var(--sub);margin:0;}
@@ -744,7 +744,7 @@ body.ready .hero__media img{transform:none;}
     <div class="dress__head">
       <div>
         <p class="eyebrow rise">Dress collection</p>
-        <h2 class="h-jp rise d1" style="margin-bottom:14px;">マタニティ衣裳は、すべてレンタル無料。</h2>
+        <h2 class="h-jp rise d1" style="margin-bottom:14px;"><span class="nb">マタニティ衣裳は、</span><span class="nb">すべて</span><span class="nb">レンタル無料。</span></h2>
         <p class="lead rise d2" style="max-width:620px;margin:0;">おなかを出すタイプ・隠れるタイプ、どちらもフリーサイズ。全15着からお選びいただけます。</p>
       </div>
       <div class="dress__arrows rise d2">
