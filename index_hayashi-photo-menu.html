@@ -75,7 +75,22 @@
     display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
     padding: 8px 16px 12px;
   }
-  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; gap: 13px; } }
+  /* mobile: keep 2 columns, tighten spacing & type so more menus fit per screen */
+  @media (max-width: 560px) {
+    .grid { gap: 10px; padding: 6px 11px 10px; }
+    .body { padding: 11px 12px 13px; }
+    .title { font-size: 15px; margin-bottom: 3px; }
+    .sub { font-size: 11px; line-height: 1.55; }
+    .more { margin-top: 9px; font-size: 11px; }
+    .cat-tag { font-size: 9.5px; padding: 3px 9px; top: 8px; left: 8px; letter-spacing: .08em; }
+    .soon-badge { font-size: 9px; padding: 3px 8px; top: 8px; right: 8px; }
+  }
+  @media (max-width: 380px) {
+    .grid { gap: 8px; padding: 6px 9px 10px; }
+    .body { padding: 9px 10px 12px; }
+    .title { font-size: 13.5px; }
+    .sub { font-size: 10px; line-height: 1.5; }
+  }
 
   .card {
     display: block; position: relative;
